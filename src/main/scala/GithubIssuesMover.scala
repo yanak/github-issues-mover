@@ -13,7 +13,7 @@ object GithubIssuesMover {
     """.stripMargin
 
   def main(args: Array[String]): Unit = {
-    if (args.length != 24) {
+    if (args.length != 20) {
       println(usage)
       sys.exit(0)
     }
@@ -28,8 +28,10 @@ object GithubIssuesMover {
         case "--to" :: value :: tail => nextOption(map ++ Map("to" -> value), tail)
         case "--to-owner" :: value :: tail => nextOption(map ++ Map("to-owner" -> value), tail)
         case "--to-repo" :: value :: tail => nextOption(map ++ Map("to-repo" -> value), tail)
-        case "--id" :: value :: tail => nextOption(map ++ Map("id" -> value), tail)
-        case "--password" :: value :: tail => nextOption(map ++ Map("password" -> value), tail)
+        case "--from-id" :: value :: tail => nextOption(map ++ Map("from-id" -> value), tail)
+        case "--from-password" :: value :: tail => nextOption(map ++ Map("from-password" -> value), tail)
+        case "--to-id" :: value :: tail => nextOption(map ++ Map("to-id" -> value), tail)
+        case "--to-password" :: value :: tail => nextOption(map ++ Map("to-password" -> value), tail)
 
         case option =>
           println("Unknown option " + option)
