@@ -4,6 +4,7 @@ The github-issues-mover moves issues in an old Github enterprise repository to a
 
 It simply gets issues by the [Github api](https://developer.github.com/v3/issues/) and creates same issues to a new repository.
 
+Of course, you can use this in github.com.
 
 # Generate package
 
