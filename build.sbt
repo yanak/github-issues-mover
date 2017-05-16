@@ -1,5 +1,5 @@
-lazy val root = (project in file(".")).
-  settings(
+lazy val root = (project in file("."))
+  .settings(
     name := "github-issues-mover",
     description := "Move old issues on Github enterprise to new repository on different host's repository",
     version := "0.0.1",
@@ -12,3 +12,4 @@ lazy val root = (project in file(".")).
       "org.scalaj" %% "scalaj-http" % "2.3.0"
     )
   )
+  .enablePlugins(JavaAppPackaging)
